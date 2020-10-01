@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6804A3280EEF2DEAFF87F51B /* Pods_Artable2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F0A5859CCA9CB3EF915A5054 /* Pods_Artable2.framework */; };
 		982E6F1425267D13008B12FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982E6F1325267D13008B12FB /* AppDelegate.swift */; };
 		982E6F1625267D13008B12FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982E6F1525267D13008B12FB /* SceneDelegate.swift */; };
 		982E6F1825267D13008B12FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982E6F1725267D13008B12FB /* ViewController.swift */; };
@@ -24,6 +25,9 @@
 		982E6F1C25267D14008B12FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		982E6F1F25267D14008B12FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		982E6F2125267D14008B12FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A20B0E187337081BBB5BAE61 /* Pods-Artable2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artable2.debug.xcconfig"; path = "Target Support Files/Pods-Artable2/Pods-Artable2.debug.xcconfig"; sourceTree = "<group>"; };
+		AE60044F0271FAC491482FBE /* Pods-Artable2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Artable2.release.xcconfig"; path = "Target Support Files/Pods-Artable2/Pods-Artable2.release.xcconfig"; sourceTree = "<group>"; };
+		F0A5859CCA9CB3EF915A5054 /* Pods_Artable2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Artable2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6804A3280EEF2DEAFF87F51B /* Pods_Artable2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F12021E9C6F6721259264C3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A20B0E187337081BBB5BAE61 /* Pods-Artable2.debug.xcconfig */,
+				AE60044F0271FAC491482FBE /* Pods-Artable2.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		2D1CFEFB5F7F77F98F283723 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F0A5859CCA9CB3EF915A5054 /* Pods_Artable2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		982E6F0725267D13008B12FB = {
 			isa = PBXGroup;
 			children = (
 				982E6F1225267D13008B12FB /* Artable2 */,
 				982E6F1125267D13008B12FB /* Products */,
+				0F12021E9C6F6721259264C3 /* Pods */,
+				2D1CFEFB5F7F77F98F283723 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 982E6F2425267D14008B12FB /* Build configuration list for PBXNativeTarget "Artable2" */;
 			buildPhases = (
+				8B8067F2D898355C7CCEBA79 /* [CP] Check Pods Manifest.lock */,
 				982E6F0C25267D13008B12FB /* Sources */,
 				982E6F0D25267D13008B12FB /* Frameworks */,
 				982E6F0E25267D13008B12FB /* Resources */,
+				A2B67EF65B02FDDEAE416F11 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8B8067F2D898355C7CCEBA79 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Artable2-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2B67EF65B02FDDEAE416F11 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Artable2/Pods-Artable2-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Artable2/Pods-Artable2-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Artable2/Pods-Artable2-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		982E6F0C25267D13008B12FB /* Sources */ = {
@@ -283,12 +352,14 @@
 		};
 		982E6F2525267D14008B12FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A20B0E187337081BBB5BAE61 /* Pods-Artable2.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RTLF7UB597;
 				INFOPLIST_FILE = Artable2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,12 +373,14 @@
 		};
 		982E6F2625267D14008B12FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE60044F0271FAC491482FBE /* Pods-Artable2.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RTLF7UB597;
 				INFOPLIST_FILE = Artable2/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
